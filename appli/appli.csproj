@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0351E618-C0BC-4FCC-83E4-89E6E12DE85D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>appli</RootNamespace>
+    <AssemblyName>appli</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>.\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjoutClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutClient.Designer.cs">
+      <DependentUpon>AjoutClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutDepannage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutDepannage.Designer.cs">
+      <DependentUpon>AjoutDepannage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajoutEnseignant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutEnseignant.Designer.cs">
+      <DependentUpon>ajoutEnseignant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajoutFabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutFabrication.Designer.cs">
+      <DependentUpon>ajoutFabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajoutFormation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutFormation.Designer.cs">
+      <DependentUpon>ajoutFormation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Article.cs" />
+    <Compile Include="attribuerCours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attribuerCours.Designer.cs">
+      <DependentUpon>attribuerCours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attribuerFabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attribuerFabrication.Designer.cs">
+      <DependentUpon>attribuerFabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attribuerPrestation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attribuerPrestation.Designer.cs">
+      <DependentUpon>attribuerPrestation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attribuer_cours.cs" />
+    <Compile Include="choixArticle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="choixArticle.Designer.cs">
+      <DependentUpon>choixArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client.cs" />
+    <Compile Include="cloturer.cs" />
+    <Compile Include="cloturerFabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cloturerFabrication.Designer.cs">
+      <DependentUpon>cloturerFabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CloturerPrestattion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CloturerPrestattion.Designer.cs">
+      <DependentUpon>CloturerPrestattion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="connexion.Designer.cs">
+      <DependentUpon>connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnexionDB.cs" />
+    <Compile Include="ConsulterSortie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsulterSortie.Designer.cs">
+      <DependentUpon>ConsulterSortie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlListeArticle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlListeArticle.Designer.cs">
+      <DependentUpon>controlListeArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="demandesDevis.cs" />
+    <Compile Include="depannage.cs" />
+    <Compile Include="detailArticle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="detailArticle.Designer.cs">
+      <DependentUpon>detailArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="enseignant.cs" />
+    <Compile Include="entrerLivraison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entrerLivraison.Designer.cs">
+      <DependentUpon>entrerLivraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="etatVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="etatVente.Designer.cs">
+      <DependentUpon>etatVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fabrication.cs" />
+    <Compile Include="formation.cs" />
+    <Compile Include="FormDevis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormDevis.Designer.cs">
+      <DependentUpon>FormDevis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="demandeDevis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="demandeDevis.Designer.cs">
+      <DependentUpon>demandeDevis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnregistrerEntree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnregistrerEntree.Designer.cs">
+      <DependentUpon>EnregistrerEntree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsulterEntre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsulterEntre.Designer.cs">
+      <DependentUpon>ConsulterEntre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeClient.Designer.cs">
+      <DependentUpon>ListeClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listeDepannage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listeDepannage.Designer.cs">
+      <DependentUpon>listeDepannage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listeFabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listeFabrication.Designer.cs">
+      <DependentUpon>listeFabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierClient.Designer.cs">
+      <DependentUpon>ModifierClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierCloture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierCloture.Designer.cs">
+      <DependentUpon>ModifierCloture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nouvelleEntrer.cs" />
+    <Compile Include="retirerCours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retirerCours.Designer.cs">
+      <DependentUpon>retirerCours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierDepannage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierDepannage.Designer.cs">
+      <DependentUpon>ModifierDepannage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifierEnseignant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifierEnseignant.Designer.cs">
+      <DependentUpon>modifierEnseignant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierFabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierFabrication.Designer.cs">
+      <DependentUpon>ModifierFabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifierFormation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifierFormation.Designer.cs">
+      <DependentUpon>modifierFormation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierStatutClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierStatutClient.Designer.cs">
+      <DependentUpon>ModifierStatutClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prix.cs" />
+    <Compile Include="QteArticlePrestation.cs" />
+    <Compile Include="sortie.cs" />
+    <Compile Include="SortieDepannage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortieDepannage.Designer.cs">
+      <DependentUpon>SortieDepannage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortieFabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortieFabrication.Designer.cs">
+      <DependentUpon>SortieFabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnregistrerArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnregistrerArticle.Designer.cs">
+      <DependentUpon>EnregistrerArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifierArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifierArticle.Designer.cs">
+      <DependentUpon>modifierArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifierCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifierCommande.Designer.cs">
+      <DependentUpon>modifierCommande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="listeArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listeArticle.Designer.cs">
+      <DependentUpon>listeArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nouvelleCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nouvelleCommande.Designer.cs">
+      <DependentUpon>nouvelleCommande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortieVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortieVente.Designer.cs">
+      <DependentUpon>SortieVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supEnseignant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supEnseignant.Designer.cs">
+      <DependentUpon>supEnseignant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supFormation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supFormation.Designer.cs">
+      <DependentUpon>supFormation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerArticle.Designer.cs">
+      <DependentUpon>SupprimerArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerClient.Designer.cs">
+      <DependentUpon>SupprimerClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerDepannage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerDepannage.Designer.cs">
+      <DependentUpon>SupprimerDepannage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerFabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerFabrication.Designer.cs">
+      <DependentUpon>SupprimerFabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supprimerFormation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supprimerFormation.Designer.cs">
+      <DependentUpon>supprimerFormation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="validerSortie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="validerSortie.Designer.cs">
+      <DependentUpon>validerSortie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vente.cs" />
+    <EmbeddedResource Include="AjoutClient.resx">
+      <DependentUpon>AjoutClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutDepannage.resx">
+      <DependentUpon>AjoutDepannage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutEnseignant.resx">
+      <DependentUpon>ajoutEnseignant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutFabrication.resx">
+      <DependentUpon>ajoutFabrication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutFormation.resx">
+      <DependentUpon>ajoutFormation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attribuerCours.resx">
+      <DependentUpon>attribuerCours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attribuerFabrication.resx">
+      <DependentUpon>attribuerFabrication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attribuerPrestation.resx">
+      <DependentUpon>attribuerPrestation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="choixArticle.resx">
+      <DependentUpon>choixArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cloturerFabrication.resx">
+      <DependentUpon>cloturerFabrication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CloturerPrestattion.resx">
+      <DependentUpon>CloturerPrestattion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="connexion.resx">
+      <DependentUpon>connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsulterSortie.resx">
+      <DependentUpon>ConsulterSortie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlListeArticle.resx">
+      <DependentUpon>controlListeArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detailArticle.resx">
+      <DependentUpon>detailArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entrerLivraison.resx">
+      <DependentUpon>entrerLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="etatVente.resx">
+      <DependentUpon>etatVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDevis.resx">
+      <DependentUpon>FormDevis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="demandeDevis.resx">
+      <DependentUpon>demandeDevis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnregistrerEntree.resx">
+      <DependentUpon>EnregistrerEntree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsulterEntre.resx">
+      <DependentUpon>ConsulterEntre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeClient.resx">
+      <DependentUpon>ListeClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listeDepannage.resx">
+      <DependentUpon>listeDepannage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listeFabrication.resx">
+      <DependentUpon>listeFabrication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierClient.resx">
+      <DependentUpon>ModifierClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierCloture.resx">
+      <DependentUpon>ModifierCloture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retirerCours.resx">
+      <DependentUpon>retirerCours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierDepannage.resx">
+      <DependentUpon>ModifierDepannage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifierEnseignant.resx">
+      <DependentUpon>modifierEnseignant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierFabrication.resx">
+      <DependentUpon>ModifierFabrication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifierFormation.resx">
+      <DependentUpon>modifierFormation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierStatutClient.resx">
+      <DependentUpon>ModifierStatutClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SortieDepannage.resx">
+      <DependentUpon>SortieDepannage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SortieFabrication.resx">
+      <DependentUpon>SortieFabrication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnregistrerArticle.resx">
+      <DependentUpon>EnregistrerArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifierArticle.resx">
+      <DependentUpon>modifierArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifierCommande.resx">
+      <DependentUpon>modifierCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="listeArticle.resx">
+      <DependentUpon>listeArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nouvelleCommande.resx">
+      <DependentUpon>nouvelleCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SortieVente.resx">
+      <DependentUpon>SortieVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supEnseignant.resx">
+      <DependentUpon>supEnseignant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supFormation.resx">
+      <DependentUpon>supFormation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerArticle.resx">
+      <DependentUpon>SupprimerArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerClient.resx">
+      <DependentUpon>SupprimerClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerDepannage.resx">
+      <DependentUpon>SupprimerDepannage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerFabrication.resx">
+      <DependentUpon>SupprimerFabrication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supprimerFormation.resx">
+      <DependentUpon>supprimerFormation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="validerSortie.resx">
+      <DependentUpon>validerSortie.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
